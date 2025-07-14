@@ -1,3 +1,10 @@
-body {
-  background: lightblue;
-}
+//base
+@use "./partials/base/reset";
+@use "./partials/base/tipografia";
+//utilities
+@use "./partials/utilities/variables";
+@use "./partials/utilities/mixins";
+//components
+@use "./partials/components/header";
+@use "./partials/components/general";
+@use "./partials/components/footer";
