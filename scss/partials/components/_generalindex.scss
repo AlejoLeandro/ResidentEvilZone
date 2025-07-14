@@ -1,0 +1,10 @@
+@import "../utilities/mixins";
+@import "../utilities/variables";
+
+body{
+    background-color: rgb(24, 24, 24);
+}
+h1{
+     @include flex (row, center, center);
+    color:  #9b1604 ;
+}

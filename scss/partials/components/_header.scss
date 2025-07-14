@@ -1,0 +1,35 @@
+@import "../utilities/mixins";
+
+header {
+    background-image: url(../assets/logos/brazo.png);
+    background-size: cover;
+    background-position: center;
+
+    .logo {
+        @include flex (row, center, center);
+
+        img {
+            width: 400px;
+        }
+    }
+
+    nav {
+        background-color: black;
+        border: 2px solid white;
+        border-radius: 8px;
+        font-size: 20px;
+
+        .navbar-collapse {
+            @include flex (row, center, center);
+        }
+
+        .nav-style-propio {
+            color: white;
+
+            &:hover {
+                color: #9b1604;
+            }
+
+        }
+    }
+}
