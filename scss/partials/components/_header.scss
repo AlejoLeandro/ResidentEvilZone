@@ -1,3 +1,4 @@
+@use "../utilities/variables";
 @import "../utilities/mixins";
 
 header {
@@ -9,7 +10,7 @@ header {
         @include flex (row, center, center);
 
         img {
-            width: 400px;
+            width: 200px;
         }
     }
 

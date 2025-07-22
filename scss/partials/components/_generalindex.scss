@@ -1,6 +1,5 @@
+@use "./maincards";
 @import "../utilities/mixins";
-@import "../utilities/variables";
-
 body{
     background-color: rgb(24, 24, 24);
 }
