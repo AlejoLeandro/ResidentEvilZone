@@ -1,0 +1,53 @@
+@use "../utilities/variables";
+@import "../utilities/mixins";
+
+.img-up-re {
+    background-image: url(../assets/caratulas/residentevilassets/residentevilmansion.png);
+    background-size: cover;
+
+    .img-title-re {
+        @include flex(row,center, center);
+        justify-self: center;
+        width: 700px
+    }
+
+    .grid-top-site {
+        margin: 80px 300px;
+        border-radius: 8px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+        "buton-jill jill-img chris-img buton-chris"
+        "buton-jill jill-img chris-img buton-chris"
+        "buton-jill jill-img chris-img buton-chris"
+        "buton-jill jill-img chris-img buton-chris";
+
+        .img-top-chris {
+            grid-area: chris-img;
+            width: 100%;
+            
+        }
+
+        .img-top-jill {
+            grid-area: jill-img;
+            width: 100%;
+        }
+
+        .buton-jill {
+            grid-area: buton-jill;
+            @include flex(row, center, center);
+            border: variables.$border-style white;
+        }
+
+    }
+
+    .buton-chris {
+        grid-area: buton-chris;
+        @include flex(row, center, center);
+        border: variables.$border-style white;
+    }
+
+
+
+}

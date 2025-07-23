@@ -44,7 +44,7 @@
         grid-area: sinopsis;
         font-size: 60px;
         border: variables.$border-style #9b1604;
-        @include flex (row, center, none);
+        @include flex (row, center,center);
     }
 
     .parrafo-sip {
@@ -74,36 +74,76 @@
 }
 
 @media (max-width: 430px) {
-    .img-sagas {
-        margin: 10px;
-        grid-template-columns: repeat(2, 0.5fr);
-        grid-template-rows: 30px 0.5fr 30px 0.5fr;
-        grid-template-areas:
-            "nombre nombre"
-            "img img"
-            "sipnopsis sipnopsis"
-            "parrafo parrafo"
-            "boton boton";
-    }
+    .index-games {
+        .img-sagas {
 
-    .nombre-game {
-        font-size: 20px;
-        padding: 10px;
-    }
+            margin: 10px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 30px 0.5fr 30px 0.5fr;
+            grid-template-areas:
+                "nombre nombre"
+                "img img"
+                "sinopsis sinopsis"
+                "parrafo parrafo"
+                "boton boton";
+        }
 
-    .sipnopsis-title {
-        font-size: 20px;
-    }
+        .nombre-game {
+            font-size: 20px;
+            padding: 10px;
+        }
 
-    .parrafo-sip {
-        font-size: 20px;
-        margin: 5px;
-    }
+        .sipnopsis-title {
+            font-size: 20px;
+        }
 
-    .boton {
-        border: variables.$border-style rgb(26, 51, 18);
-        padding: 10px;
-        font-size: 40px;
-        margin: 5px;
+        .parrafo-sip {
+            font-size: 20px;
+            margin: 5px;
+        }
+
+        .boton {
+            border: variables.$border-style rgb(26, 51, 18);
+            padding: 10px;
+            font-size: 40px;
+            margin: 5px;
+        }
     }
 }
+@media (min-width: 431px) and (max-width: 768px ){
+    .index-games{
+        .img-sagas {
+
+            margin: 10px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 30px 0.5fr 30px 0.5fr;
+            grid-template-areas:
+                "nombre nombre"
+                "img img"
+                "sinopsis sinopsis"
+                "parrafo parrafo"
+                "boton boton";
+        }
+
+        .nombre-game {
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        .sipnopsis-title {
+            font-size: 20px;
+        }
+
+        .parrafo-sip {
+            font-size: 20px;
+            margin: 5px;
+        }
+
+        .boton {
+            border: variables.$border-style rgb(26, 51, 18);
+            padding: 10px;
+            font-size: 40px;
+            margin: 5px;
+        }
+    }
+    }

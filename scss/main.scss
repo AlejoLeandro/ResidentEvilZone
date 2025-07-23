@@ -8,5 +8,8 @@
 @use "./partials/components/header";
 @use "./partials/components/generalindex";
 @use "./partials/components/footer";
-@use "./partials/components/maincards"
+//index
+@use "./partials/components/maincards";
+//resident evil
+@use "./partials/components/upresidenteevil.scss";
 

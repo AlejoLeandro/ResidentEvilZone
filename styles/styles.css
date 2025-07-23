@@ -90,7 +90,7 @@ header nav .nav-style-propio:hover {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: none;
+  align-items: center;
 }
 .index-games .parrafo-sip {
   margin: 20px;
@@ -116,24 +116,49 @@ header nav .nav-style-propio:hover {
 }
 
 @media (max-width: 430px) {
-  .img-sagas {
+  .index-games .img-sagas {
     margin: 10px;
-    grid-template-columns: repeat(2, 0.5fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 30px 0.5fr 30px 0.5fr;
-    grid-template-areas: "nombre nombre" "img img" "sipnopsis sipnopsis" "parrafo parrafo" "boton boton";
+    grid-template-areas: "nombre nombre" "img img" "sinopsis sinopsis" "parrafo parrafo" "boton boton";
   }
-  .nombre-game {
+  .index-games .nombre-game {
     font-size: 20px;
     padding: 10px;
   }
-  .sipnopsis-title {
+  .index-games .sipnopsis-title {
     font-size: 20px;
   }
-  .parrafo-sip {
+  .index-games .parrafo-sip {
     font-size: 20px;
     margin: 5px;
   }
-  .boton {
+  .index-games .boton {
+    border: 2px solid rgb(26, 51, 18);
+    padding: 10px;
+    font-size: 40px;
+    margin: 5px;
+  }
+}
+@media (min-width: 431px) and (max-width: 768px) {
+  .index-games .img-sagas {
+    margin: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 30px 0.5fr 30px 0.5fr;
+    grid-template-areas: "nombre nombre" "img img" "sinopsis sinopsis" "parrafo parrafo" "boton boton";
+  }
+  .index-games .nombre-game {
+    font-size: 20px;
+    padding: 10px;
+  }
+  .index-games .sipnopsis-title {
+    font-size: 20px;
+  }
+  .index-games .parrafo-sip {
+    font-size: 20px;
+    margin: 5px;
+  }
+  .index-games .boton {
     border: 2px solid rgb(26, 51, 18);
     padding: 10px;
     font-size: 40px;
@@ -150,6 +175,51 @@ h1 {
   justify-content: center;
   align-items: center;
   color: #9b1604;
+}
+
+.img-up-re {
+  background-image: url(../assets/caratulas/residentevilassets/residentevilmansion.png);
+  background-size: cover;
+}
+.img-up-re .img-title-re {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  width: 700px;
+}
+.img-up-re .grid-top-site {
+  margin: 80px 300px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas: "buton-jill jill-img chris-img buton-chris" "buton-jill jill-img chris-img buton-chris" "buton-jill jill-img chris-img buton-chris" "buton-jill jill-img chris-img buton-chris";
+}
+.img-up-re .grid-top-site .img-top-chris {
+  grid-area: chris-img;
+  width: 100%;
+}
+.img-up-re .grid-top-site .img-top-jill {
+  grid-area: jill-img;
+  width: 100%;
+}
+.img-up-re .grid-top-site .buton-jill {
+  grid-area: buton-jill;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+}
+.img-up-re .buton-chris {
+  grid-area: buton-chris;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
 }
 
 /*# sourceMappingURL=styles.css.map */
