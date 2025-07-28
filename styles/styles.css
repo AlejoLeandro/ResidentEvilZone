@@ -180,6 +180,7 @@ h1 {
 .img-up-re {
   background-image: url(../assets/caratulas/residentevilassets/residentevilmansion.png);
   background-size: cover;
+  border: 2px solid white;
 }
 .img-up-re .img-title-re {
   display: flex;
@@ -193,33 +194,124 @@ h1 {
   margin: 80px 300px;
   border-radius: 8px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
   grid-template-rows: repeat(4, 1fr);
   grid-template-areas: "buton-jill jill-img chris-img buton-chris" "buton-jill jill-img chris-img buton-chris" "buton-jill jill-img chris-img buton-chris" "buton-jill jill-img chris-img buton-chris";
 }
-.img-up-re .grid-top-site .img-top-chris {
+.img-up-re .img-top-chris {
   grid-area: chris-img;
-  width: 100%;
+  width: 300px;
+  height: 400px;
+  mask-image: linear-gradient(black 80%, transparent);
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
 }
-.img-up-re .grid-top-site .img-top-jill {
+.img-up-re .img-top-jill {
   grid-area: jill-img;
-  width: 100%;
+  width: 300px;
+  height: 400px;
+  mask-image: linear-gradient(black 80%, transparent);
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
 }
-.img-up-re .grid-top-site .buton-jill {
+.img-up-re .buton-jill {
   grid-area: buton-jill;
+  width: 150px;
+  height: 50px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
-  border: 2px solid white;
+  align-self: center;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
+}
+.img-up-re .buton-jill::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #7f6a4b, #cac9aa, #55432f, #b48b3d, #999572, #bda666, #625d49, #3e2d1d);
+  background-size: 800%;
+  border-radius: 10px;
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
 }
 .img-up-re .buton-chris {
   grid-area: buton-chris;
+  width: 150px;
+  height: 50px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
-  border: 2px solid white;
+  align-self: center;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
+}
+.img-up-re .buton-chris::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #7f6a4b, #cac9aa, #55432f, #b48b3d, #999572, #bda666, #625d49, #3e2d1d);
+  background-size: 800%;
+  border-radius: 10px;
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.historia-residentevil {
+  display: flex;
+  justify-content: space-evenly;
+}
+.historia-residentevil div {
+  margin: 20px;
+  width: 600px;
+  border: 5px solid;
+  border-image: linear-gradient(45deg, #c13e12, #df773c, #f2a461, #ce5824, #a81a04, #ab2504, #9b1604, #dc622e) 1;
+  padding: 20px;
+}
+.historia-residentevil div h2 {
+  font-family: "Anton", sans-serif;
+  color: #9b1604;
+}
+.historia-residentevil div p {
+  margin: 10px;
+  padding: 10x;
+  font-size: 20px;
+  color: white;
+}
+.historia-residentevil div iframe {
+  margin: 10px;
+  padding: 30px;
 }
 
 /*# sourceMappingURL=styles.css.map */
