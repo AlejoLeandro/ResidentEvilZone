@@ -2,7 +2,7 @@
 @import "../utilities/mixins";
 
 header {
-    background-image: url(../assets/logos/brazo.png);
+    background-image: url(../assets/index/residentevilmansion.png);
     background-size: cover;
     background-position: center;
 
@@ -10,7 +10,7 @@ header {
         @include flex (row, center, center);
 
         img {
-            width: 200px;
+            width: 400px;
         }
     }
 
@@ -28,7 +28,7 @@ header {
             color: white;
 
             &:hover {
-                color: #9b1604;
+                color: #b48b3d;
             }
 
         }
