@@ -4,3 +4,8 @@
     justify-content: $justify;
     align-items: $alingn;
 }
+
+@mixin border {
+    border: 5px solid;
+    border-image: linear-gradient(45deg, #7f6a4b, #cac9aa, #55432f, #b48b3d, #999572, #bda666, #625d49, #3e2d1d) 1;
+}
