@@ -98,9 +98,46 @@
         }
     }
 }
+
 //carrusel personajes
-.carrusel{
-    img{
-        width: 1000px;
+.persoajes-index {
+    @include flex(column, center, center);
+
+    h2 {
+        font-size: 80px;
+        margin: 10px;
     }
+
+    div {
+        display: flex;
+        width: 800px;
+        height: 630px;
+        @include border;
+        img {
+            width: 0;
+            flex-grow: 1;
+            object-fit: cover;
+            opacity: 0.8;
+            transition: 0.5s ease;
+
+            &:hover {
+                cursor: crosshair;
+                width: 250px;
+                opacity: 1;
+                filter: contrast(120%);
+
+            }
+
+
+
+
+        }
+    }
+
+    .buton {
+        @include button;
+        font-size: 50px;
+        margin: 20px;
+    }
+
 }

@@ -4,8 +4,55 @@
     justify-content: $justify;
     align-items: $alingn;
 }
-
+//bordes con degradado
 @mixin border {
     border: 5px solid;
     border-image: linear-gradient(45deg, #7f6a4b, #cac9aa, #55432f, #b48b3d, #999572, #bda666, #625d49, #3e2d1d) 1;
 }
+//boton con animacion
+@mixin button {
+    grid-area: buton-jill;
+    width: 400px;
+    height: 75px;
+    @include flex(column-reverse, center, center);
+    align-self: center;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    border-radius: 12px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg,
+                #7f6a4b, #cac9aa, #55432f, #b48b3d, #999572, #bda666, #625d49, #3e2d1d);
+        background-size: 800%;
+        border-radius: 10px;
+        filter: blur(8px);
+        animation: glowing 20s linear infinite
+    }
+
+    @keyframes glowing {
+        0% {
+            background-position: 0 0;
+        }
+
+        50% {
+            background-position: 400% 0;
+        }
+
+        100% {
+            background-position: 0 0;
+        }
+    }
+}
+
