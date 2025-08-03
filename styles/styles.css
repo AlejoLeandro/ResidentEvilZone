@@ -1,17 +1,317 @@
-/* Error: Can't find stylesheet to import.
- *    ,
- * 13 | @use "./partials/components/maincards";
- *    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   scss\main.scss 13:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a    \2577 \a 13 \2502  @use \"./partials/components/maincards\";\d\a    \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   scss\\main.scss 13:1  root stylesheet";
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Nosifer&family=Readex+Pro:wght@160..700&family=Rubik+Wet+Paint&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Nosifer&family=Passion+One:wght@400;700;900&family=Readex+Pro:wght@160..700&family=Rubik+Wet+Paint&display=swap");
+* {
+  margin: 0;
+  padding: 0;
 }
+
+body {
+  background-color: rgb(24, 24, 24);
+  margin: 10px;
+}
+
+h2 {
+  font-family: "Anton", sans-serif;
+  color: white;
+}
+
+summary {
+  color: white;
+  font-family: "Anton", sans-serif;
+}
+
+h1 {
+  font-size: 80px;
+  font-family: "Rubik Wet Paint", system-ui;
+  color: white;
+}
+
+h3 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+header {
+  background-image: url(../assets/index/logo/residentevilmansion.png);
+  background-size: cover;
+  background-position: center;
+}
+header .logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header .logo img {
+  width: 400px;
+}
+header nav {
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 8px;
+  font-size: 20px;
+}
+header nav .navbar-collapse {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header nav .nav-style-propio {
+  color: white;
+}
+header nav .nav-style-propio:hover {
+  color: #b48b3d;
+}
+
+.sinopsis-residentevil {
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 2px solid white;
+  margin: 0;
+}
+.sinopsis-residentevil div {
+  margin: 40px;
+  width: 600px;
+  border: 5px solid;
+  border-image: linear-gradient(45deg, #7f6a4b, #cac9aa, #55432f, #b48b3d, #999572, #bda666, #625d49, #3e2d1d) 1;
+  padding: 20px;
+}
+.sinopsis-residentevil div p {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10x;
+  font-size: 20px;
+  color: white;
+}
+.sinopsis-residentevil div iframe {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 30px;
+}
+
+.trama {
+  display: flex;
+  width: auto;
+  height: 200px;
+  margin: 10px;
+}
+.trama .box1 {
+  margin: 0;
+  width: auto;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.trama .box1 p {
+  margin: 10px;
+}
+.trama .box2 {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 200px;
+  margin-bottom: 15px;
+}
+.trama .box2 img {
+  margin: 10px;
+  width: 200px;
+  border: 5px solid;
+  border-image: linear-gradient(45deg, #7f6a4b, #cac9aa, #55432f, #b48b3d, #999572, #bda666, #625d49, #3e2d1d) 1;
+}
+.trama .box2 p {
+  margin: 0px 5px 10px 5px;
+  font-size: 12px;
+}
+
+.final {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.final .box2 {
+  border: 5px solid;
+  border-image: linear-gradient(45deg, #7f6a4b, #cac9aa, #55432f, #b48b3d, #999572, #bda666, #625d49, #3e2d1d) 1;
+  margin-bottom: 15px;
+}
+.final .box2 img {
+  width: 400px;
+}
+.final .box2 p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.persoajes-index {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.persoajes-index h2 {
+  font-size: 80px;
+  margin: 10px;
+}
+.persoajes-index div {
+  display: flex;
+  width: 800px;
+  height: 630px;
+  border: 5px solid;
+  border-image: linear-gradient(45deg, #7f6a4b, #cac9aa, #55432f, #b48b3d, #999572, #bda666, #625d49, #3e2d1d) 1;
+}
+.persoajes-index div img {
+  width: 0;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 0.5s ease;
+}
+.persoajes-index div img:hover {
+  cursor: crosshair;
+  width: 250px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+.persoajes-index .buton {
+  grid-area: buton-jill;
+  width: 400px;
+  height: 75px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
+  font-size: 50px;
+  margin: 20px;
+}
+.persoajes-index .buton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #7f6a4b, #cac9aa, #55432f, #b48b3d, #999572, #bda666, #625d49, #3e2d1d);
+  background-size: 800%;
+  border-radius: 10px;
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+}
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+footer {
+  color: white;
+  border-top: 2px solid white;
+}
+
+h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "DM Serif Text", serif;
+  font-weight: bold;
+}
+
+.jill {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border: 5px solid;
+  border-image: linear-gradient(45deg, #7f6a4b, #cac9aa, #55432f, #b48b3d, #999572, #bda666, #625d49, #3e2d1d) 1;
+}
+.jill .jill-personajes h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.jill .jill-personajes article {
+  position: relative;
+  width: 250px;
+  transition: all 0.3s ease;
+}
+.jill .jill-personajes article img:first-child {
+  box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
+  border-radius: 4px;
+  object-fit: cover;
+  width: 100%;
+}
+.jill .jill-personajes article img:last-child {
+  position: absolute;
+  width: 240px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(25%);
+  transition: 0.3s ease;
+  opacity: 0;
+  background-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 50%, rgb(0, 0, 0) 95%);
+}
+.jill .jill-personajes article:hover {
+  transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+.jill .jill-personajes article:hover img:last-child {
+  opacity: 1;
+  transform: translateY(10%);
+}
+.jill .jill-personajes article::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 50%, rgb(0, 0, 0) 95%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.jill .jill-personajes article:hover::before {
+  opacity: 1;
+}
+.jill div {
+  margin: 10px;
+}
+.jill div h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.jill div summary {
+  font-size: 30px;
+}
+
+/*# sourceMappingURL=styles.css.map */
