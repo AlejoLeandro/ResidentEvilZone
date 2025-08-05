@@ -11,7 +11,6 @@
 }
 //boton con animacion
 @mixin button {
-    grid-area: buton-jill;
     width: 400px;
     height: 75px;
     @include flex(column-reverse, center, center);

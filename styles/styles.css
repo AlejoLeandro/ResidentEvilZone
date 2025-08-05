@@ -185,7 +185,6 @@ header nav .nav-style-propio:hover {
   filter: contrast(120%);
 }
 .persoajes-index .buton {
-  grid-area: buton-jill;
   width: 400px;
   height: 75px;
   display: flex;
@@ -310,8 +309,58 @@ h1 {
   justify-content: flex-start;
   align-items: center;
 }
-.jill div summary {
+.jill div details summary {
   font-size: 30px;
+}
+.jill div details a {
+  width: 400px;
+  height: 75px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  border-radius: 12px;
+}
+.jill div details a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #7f6a4b, #cac9aa, #55432f, #b48b3d, #999572, #bda666, #625d49, #3e2d1d);
+  background-size: 800%;
+  border-radius: 10px;
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+}
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.jill:nth-of-type(2) .jill-personajes article img:last-child {
+  width: 270px;
+}
+
+.jill:nth-of-type(3) .jill-personajes article img:last-child {
+  width: 200px;
 }
 
 /*# sourceMappingURL=styles.css.map */

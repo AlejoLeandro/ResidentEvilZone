@@ -1,4 +1,7 @@
+@use "../../base/tipografia";
+@use "../../utilities/variables";
 @import "../../utilities/mixins";
+
 
 h1 {
     @include flex(row, center, center);
@@ -8,13 +11,14 @@ h1 {
 
 .jill {
     @include flex(row, flex-start, center);
-      @include border;
+    @include border;
 
     .jill-personajes {
-        h2{
-             @include flex(row, center, center);
-            
+        h2 {
+            @include flex(row, center, center);
+
         }
+
         article {
             position: relative;
             width: 250px;
@@ -71,14 +75,45 @@ h1 {
             }
         }
     }
-    div{
+  
+
+    div {
         margin: 10px;
-        h2{
-           @include flex(row, flex-start, center);  
+
+        h2 {
+            @include flex(row, flex-start, center);
         }
-        summary{
-            font-size: 30px;
+
+        details {
+
+            summary {
+                font-size: 30px;
+            }
+            a{
+                @include button;
+
+            }
+
         }
+
     }
 
 }
+  .jill:nth-of-type(2){
+        .jill-personajes{
+            article{
+                img:last-child{
+                    width: 270px
+                }
+            }
+        }
+    }
+      .jill:nth-of-type(3){
+        .jill-personajes{
+            article{
+                img:last-child{
+                    width: 200px
+                }
+            }
+        }
+    }
