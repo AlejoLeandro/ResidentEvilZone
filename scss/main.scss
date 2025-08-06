@@ -9,6 +9,7 @@
 @use "./partials/components/generalindex";
 @use "./partials/components/footer";
 //Personajes
-@use "./partials/components/personajesstyles/mainpersonajes";
-
+@use "./partials/components/mainpersonajes";
+//Enemigos
+@use "./partials/components/enemigos";
 
