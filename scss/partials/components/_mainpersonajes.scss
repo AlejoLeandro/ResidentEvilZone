@@ -1,21 +1,21 @@
 @use "../base/tipografia";
 @use "../utilities/variables";
-@import "../utilities/mixins";
+@use "../utilities/mixins";
 
 
 h1 {
-    @include flex(row, center, center);
+    @include mixins.flex(row, center, center);
     font-family: "DM Serif Text", serif;
     font-weight: bold;
 }
 
 .jill {
-    @include flex(row, flex-start, center);
-    @include border;
+    @include mixins.flex(row, flex-start, center);
+    @include mixins.border;
 
     .jill-personajes {
         h2 {
-            @include flex(row, center, center);
+            @include mixins.flex(row, center, center);
 
         }
 
@@ -81,7 +81,7 @@ h1 {
         margin: 10px;
 
         h2 {
-            @include flex(row, flex-start, center);
+            @include mixins.flex(row, flex-start, center);
         }
 
         details {
@@ -90,7 +90,7 @@ h1 {
                 font-size: 30px;
             }
             a{
-                @include button;
+                @include mixins.button;
 
             }
 

@@ -1,6 +1,6 @@
 @use "../base/tipografia";
 @use"../utilities/variables";
-@import "../utilities/mixins";
+@use "../utilities/mixins";
 
 
 
@@ -15,11 +15,11 @@
     div {
         margin: 40px;
         width: 600px;
-        @include border;
+        @include mixins.border;
         padding: 20px;
 
         p {
-            @include flex(row, center, center);
+            @include mixins.flex(row, center, center);
             margin: 10px;
             padding: 10x;
             font-size: 20px;
@@ -27,7 +27,7 @@
         }
 
         iframe {
-            @include flex(row, center, center);
+            @include mixins.flex(row, center, center);
             margin: 10px;
             padding: 30px;
         }
@@ -68,7 +68,7 @@
         img {
             margin: 10px;
             width: 200px;
-            @include border;
+            @include mixins.border;
 
 
         }
@@ -82,10 +82,10 @@
 }
 
 .final {
-    @include flex(column, center, center);
+    @include mixins.flex(column, center, center);
 
     .box2 {
-        @include border;
+        @include mixins.border;
         margin-bottom: 15px;
 
         img {
@@ -93,7 +93,7 @@
         }
 
         p {
-            @include flex(column, center, center);
+            @include mixins.flex(column, center, center);
 
         }
     }
@@ -101,7 +101,7 @@
 
 //carrusel personajes
 .persoajes-index {
-    @include flex(column, center, center);
+    @include mixins.flex(column, center, center);
 
     h2 {
         font-size: 80px;
@@ -112,7 +112,7 @@
         display: flex;
         width: 800px;
         height: 630px;
-        @include border;
+        @include mixins.border;
         img {
             width: 0;
             flex-grow: 1;
@@ -135,7 +135,7 @@
     }
 
     .buton {
-        @include button;
+        @include mixins.button;
         font-size: 50px;
         margin: 20px;
     }
