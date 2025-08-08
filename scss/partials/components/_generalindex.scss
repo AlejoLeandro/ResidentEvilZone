@@ -10,26 +10,35 @@
     justify-content: space-evenly;
     border-bottom: 2px solid white;
     margin: 0;
+    flex-wrap: wrap;
 
 
     div {
-        margin: 40px;
-        width: 600px;
+        margin: 20px;
+        width: 100%;
+        max-width: 600px;
         @include mixins.border;
         padding: 20px;
 
+
         p {
             @include mixins.flex(row, center, center);
-            margin: 10px;
-            padding: 10x;
+            margin: 10px 0;
+            padding: 10px;
             font-size: 20px;
             color: white;
+            text-align: center;
         }
 
         iframe {
             @include mixins.flex(row, center, center);
-            margin: 10px;
-            padding: 30px;
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            height: auto;
+            border: 0;
+            margin: 10px 0 0;
+            padding: 0;
         }
     }
 
@@ -38,66 +47,105 @@
 //TRAMA
 .trama {
     display: flex;
-    width: auto;
-    height: 200px;
+    flex-wrap: wrap;
+    width: 100%;
     margin: 10px;
+    gap: 10px;
 
     .box1 {
-        margin: 0;
-        width: auto;
-        height: 200px;
+        flex: 1 1 300px;
         display: flex;
         flex-direction: column;
 
         p {
             margin: 10px;
         }
-
-
-
     }
 
     .box2 {
+        flex: 1 1 300px;
         display: flex;
         flex-direction: column;
-        width: 400px;
-        height: 200px;
-        margin-bottom: 15px;
-
+        align-items: center;
 
         img {
             margin: 10px;
-            width: 200px;
+            width: 100%;
+            max-width: 200px;
             @include mixins.border;
+            transition: transform 0.5s ease;
 
-
+            &:hover {
+                transform: scale(1.7);
+            }
         }
 
         p {
             margin: 0px 5px 10px 5px;
-
             font-size: 12px;
+            text-align: center;
         }
     }
 }
 
+//media
+@media (max-width: 768px) {
+    .trama {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+
+        .box1,
+        .box2 {
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+    }
+}
 .final {
-    @include mixins.flex(column, center, center);
+  @include mixins.flex(column, center, center);
 
-    .box2 {
-        @include mixins.border;
-        margin-bottom: 15px;
+  .box2 {
+    @include mixins.border;
+    margin-bottom: 15px;
 
-        img {
-            width: 400px;
-        }
+    
+    width: 100%;
+    max-width: 560px;
 
-        p {
-            @include mixins.flex(column, center, center);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 
-        }
+    img {
+     
+      width: 100%;     
+      max-width: 400px;  
+      height: auto;      
+      display: block;
     }
+
+    p {
+      @include mixins.flex(column, center, center);
+      margin: 0;
+      text-align: center;
+      line-height: 1.4;
+      font-size: clamp(12px, 2.5vw, 14px); 
+    }
+  }
 }
+
+
+@media (max-width: 480px) {
+  .final .box2 {
+    max-width: 100%;
+    gap: 6px;
+  }
+}
+
 
 //carrusel personajes
 .persoajes-index {
@@ -113,6 +161,7 @@
         width: 800px;
         height: 630px;
         @include mixins.border;
+
         img {
             width: 0;
             flex-grow: 1;
@@ -131,6 +180,7 @@
 
 
 
+
         }
     }
 
@@ -139,5 +189,48 @@
         font-size: 50px;
         margin: 20px;
     }
+    @media (max-width: 1024px) {
+        div {
+            width: 100%;
+            height: 500px;
+        }
+        h2 {
+            font-size: 60px;
+        }
+        .buton {
+            font-size: 40px;
+        }
+    }
 
+    @media (max-width: 768px) {
+        div {
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+
+            img {
+                width: 100% !important;
+                height: 200px;
+            }
+        }
+        h2 {
+            font-size: 40px;
+        }
+        .buton {
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        h2 {
+            font-size: 28px;
+        }
+        .buton {
+            font-size: 20px;
+        }
+        div img {
+            height: 150px;
+        }
+    }
 }
+

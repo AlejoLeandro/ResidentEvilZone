@@ -12,6 +12,10 @@ h1 {
 .jill {
     @include mixins.flex(row, flex-start, center);
     @include mixins.border;
+    @media (max-width: 480px) {
+  flex-direction: column;
+  }
+
 
     .jill-personajes {
         h2 {
@@ -97,6 +101,24 @@ h1 {
         }
 
     }
+    
+@media (max-width: 480px) {
+  div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+
+  h2 {
+    grid-column: 1 / -1; 
+    text-align: center;
+  }
+
+  details {
+    border-radius: 6px;
+    padding: 10px;
+  }
+}
+}
 
 }
   .jill:nth-of-type(2){
