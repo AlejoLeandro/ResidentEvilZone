@@ -5,12 +5,13 @@
 .card-enemy {
     @include mixins.flex (row, center, center);
     flex-wrap: wrap;
+
     div {
         margin: 16px;
         width: 300px;
         @include mixins.border;
         @include mixins.flex (column, center, center);
-        
+
 
         h2 {
             text-align: center;
@@ -21,10 +22,12 @@
             border-top: 1px solid white;
             border-bottom: 1px solid white;
             width: 75%;
-               &:hover {
-                    transform: scale(1.7);
-                    border: none;
-                }
+            transition: transform 0.5s ease;
+
+            &:hover {
+                transform: scale(1.7);
+                border: none;
+            }
         }
 
         h3 {

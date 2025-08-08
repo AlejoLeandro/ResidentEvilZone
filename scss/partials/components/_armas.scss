@@ -18,9 +18,11 @@
             width: 100%;
             height: auto;
             box-shadow: 0px 0px 30px #000;
-               &:hover {
-                    transform: scale(1.2);
-                }
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.2);
+            }
         }
 
 
