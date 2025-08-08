@@ -389,6 +389,10 @@ h1 {
   border-bottom: 1px solid white;
   width: 75%;
 }
+.card-enemy div img:hover {
+  transform: scale(1.7);
+  border: none;
+}
 .card-enemy div h3 {
   margin: 10px;
   text-align: center;
@@ -412,6 +416,63 @@ h1 {
   width: 100%;
   height: auto;
   box-shadow: 0px 0px 30px #000;
+}
+.card-armas div img:hover {
+  transform: scale(1.2);
+}
+
+.localizacion {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+.localizacion h2 {
+  grid-row: 1;
+  text-align: center;
+  margin: 0;
+}
+.localizacion > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+.localizacion > div div {
+  text-align: center;
+}
+.localizacion > div div img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+.localizacion > div div img:hover {
+  transform: scale(1.7);
+}
+.localizacion > div div p {
+  margin-top: 8px;
+  font-style: italic;
+  color: white;
+  text-decoration: underline solid #b48b3d;
+}
+@media (max-width: 768px) {
+  .localizacion > div div {
+    font-size: 0.9rem;
+    background-size: 100% 1.5px;
+  }
+}
+@media (max-width: 480px) {
+  .localizacion > div div {
+    font-size: 0.8rem;
+    background-size: 100% 1px;
+  }
+  .localizacion > div div img:hover {
+    transform: scale(1.4);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
